@@ -59,7 +59,7 @@ public class Funcionario implements Runnable {
                     ferramentaDireita.acquire();
                 }
                 
-                System.out.println("[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")) + " - FUNCIONARIO] - Estação: " + estacao.nome + ", Funcionário: " + nome + " trabalhando...");
+                System.out.println("[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")) + " - FUNCIONARIO] - Estação: " + estacao.nome + ", Funcionário: " + nome + " trabalhando...");
 
                 construirCarro();
 

@@ -20,7 +20,7 @@ public class Estacao implements Runnable {
         Semaphore ferramenta4 = new Semaphore(1);
         Semaphore ferramenta5 = new Semaphore(1);
 
-        Funcionario funcionario1 = new Funcionario(1, "João", this, ferramenta1, ferramenta2);
+        Funcionario funcionario1 = new Funcionario(1, "João", this, ferramenta1, ferramenta2);
         Funcionario funcionario2 = new Funcionario(2, "Maria", this, ferramenta2, ferramenta3);
         Funcionario funcionario3 = new Funcionario(3, "Pedro", this, ferramenta3, ferramenta4);
         Funcionario funcionario4 = new Funcionario(4, "Ana", this, ferramenta4, ferramenta5);

@@ -12,7 +12,7 @@ public class Server {
         final int PORTA = 12345;
 
         ExecutorService executorService = Executors.newFixedThreadPool(1);
-        Fabrica fabrica = new Fabrica(5, 5, 40);
+        Fabrica fabrica = new Fabrica(500, 5, 40);
 
         executorService.execute(fabrica);
 
@@ -24,12 +24,10 @@ public class Server {
                     Socket cliente = servidor.accept();
                     System.out.println("Cliente conectado: " + cliente.getInetAddress());
     
-                    // Envia uma mensagem para o cliente
                     PrintWriter saida = new PrintWriter(cliente.getOutputStream(), true);
                     Carro carro = fabrica.retirarCarro();
                     saida.println(carro.toString());
     
-                    // Fecha a conexão com este cliente
                     cliente.close();
                     System.out.println("Conexão com cliente encerrada.\n");
                 }

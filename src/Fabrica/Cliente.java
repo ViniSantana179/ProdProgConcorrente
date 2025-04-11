@@ -22,7 +22,9 @@ public class Cliente implements Runnable {
                 Loja loja = lojas.get((int) (Math.random() * lojas.size()));
                 System.out.println("[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")) + " - CLIENTE] - Comprando carro da loja " + loja.nome);
                 Carro carro = loja.vender();
-                System.out.println("[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")) + " - CLIENTE] - Carro " + carro.modelo + " vendido para cliente pela loja " + loja.nome);
+                System.out.println("[" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"))
+                + " - CLIENTE] - Carro " + carro.modelo + " vendido para cliente pela loja " + loja.nome
+                + ", produzido pelo funcionário " + carro.funcionario + " na estação " + carro.estacao);
                 carros.add(carro);
                 Thread.sleep(1000);
             }
